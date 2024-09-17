@@ -66,3 +66,18 @@ ScrollReveal().reveal(".footer", {
   delay: 100,
 });
 
+/**
+ * Menu mobile
+ */
+function navBar() {
+  const navbar = document.getElementById('navbar');
+  const header = document.getElementById('header');
+
+  if (navbar.classList.contains('openbar')) {
+    navbar.classList.remove('openbar');
+    header.classList.remove('header-bar');
+  }else {
+    navbar.classList.add('openbar');
+    header.classList.add('header-bar');
+  }
+}

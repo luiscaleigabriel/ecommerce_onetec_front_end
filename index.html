@@ -10,12 +10,14 @@
 </head>
 <body>
   
-  <header class="header">
+  <header id="header" class="header">
     <div class="header-content container">
       <div class="logo">
-        <h1>OneTec</h1><span>.</span>
+        <a href="index.html">
+          <h1>OneTec</h1>
+        </a>
       </div>
-      <nav class="navbar">
+      <nav id="navbar" class="navbar">
         <ul>
           <li>
             <a href="index.html">Home</a>
@@ -36,15 +38,28 @@
           <input type="search" name="search" id="search" placeholder="Oque você quer ver" />
           <button type="submit"> <i class="fa fa-search"></i> </button>
         </form>
-        <button class="heart-icon">
-          <img src="image/heart.png" alt="heart" />
-        </button>
-        <button class="cart-icon">
-          <img src="image/cart.png" alt="cart" />
-        </button>
+        <div class="list-icon">
+          <a href="#" class="heart-icon">
+            <img src="image/heart.png" alt="heart" />
+            <span>10</span>
+          </a>
+          <a href="#" class="cart-icon">
+            <img src="image/cart.png" alt="cart" />
+            <span>15</span>
+          </a>
+          <button id="toggle" class="toggle" onclick="navBar()">
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
+
+  <section class="">
+
+  </section>
 
   <script src="js/swiper.js"></script>
   <script src="js/app.js"></script>
