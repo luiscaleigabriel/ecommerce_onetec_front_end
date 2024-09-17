@@ -27,6 +27,32 @@
 
 body {
   font-size: 62.5%;
-  font-family: sans-serif;
+  font-family: var(--font-main);
   background-color: var(--colo-white-1);
 }
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 2.5rem;
+}
+
+a, p {
+  font-size: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+/*Header
+------------------------------------------------------ */
