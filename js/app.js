@@ -22,23 +22,21 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-var swiper1 = new Swiper(".mySwiper1", {
+var swiper1 = new Swiper(".mySwiperProduct", {
   loop: true,
-  slidesPerView: 2,
   spaceBetween: 10,
 
-  // navigation: {
-  //   nextEl: '.btn-next',
-  //   prevEl: '.btn-prev',
-  // },
-
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  navigation: {
+    nextEl: '.btn-next1',
+    prevEl: '.btn-prev1',
   },
 
   breakpoints: {
-    640: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    600: {
       slidesPerView: 2,
       spaceBetween: 10,
     },
@@ -54,9 +52,11 @@ var swiper1 = new Swiper(".mySwiper1", {
 });
 
 const myloop1 = document.getElementById('btn-next');
+const myloop2 = document.getElementById('btn-next1');
 
 setInterval(() => {
   myloop1.click();
+  myloop2.click();
 }, 10000);
 
 /**
