@@ -53,10 +53,12 @@ var swiper1 = new Swiper(".mySwiperProduct", {
 
 const myloop1 = document.getElementById('btn-next');
 const myloop2 = document.getElementById('btn-next1');
+const myloop3 = document.getElementById('btn-next2');
 
 setInterval(() => {
   myloop1.click();
   myloop2.click();
+  myloop3.click();
 }, 10000);
 
 /**
