@@ -3,13 +3,34 @@
  */
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  slidesPerView: 2,
   spaceBetween: 10,
 
   navigation: {
     nextEl: '.btn-next',
-    prevEl: '.btn-prev',
   },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    }
+  },
+});
+
+var swiper1 = new Swiper(".mySwiper1", {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 10,
+
+  // navigation: {
+  //   nextEl: '.btn-next',
+  //   prevEl: '.btn-prev',
+  // },
 
   pagination: {
     el: ".swiper-pagination",
@@ -31,6 +52,12 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+const myloop1 = document.getElementById('btn-next');
+
+setInterval(() => {
+  myloop1.click();
+}, 10000);
 
 // Animations
 ScrollReveal().reveal(".top_nav", {
