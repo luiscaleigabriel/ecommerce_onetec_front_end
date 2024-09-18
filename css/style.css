@@ -604,6 +604,23 @@ img {
   transform: scale(1.01);
 }
 
+.btn-secundary {
+  color: var(--colo-dark-1);
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px 20px;
+  border: 2px solid var(--color-green);
+  transition: var(--transation-1);
+  background-color: var(--color-green);
+}
+
+.btn-secundary:hover {
+  color: var(--color-green);
+  background-color: transparent;
+  transform: scale(1.01);
+}
+
 @media screen and (max-width: 800px) {
   .product:hover .btn-add {
     display: none;
@@ -655,3 +672,74 @@ img {
   color: var(--colo-white-1);
 }
 
+/*Banner
+------------------------------------------------------ */
+.banner-content {
+  margin-bottom: 30px;
+}
+
+.banner-c {
+  padding: 30px;
+  color: var(--colo-white-1);
+  background-color: var(--colo-dark-1);
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-about h2 {
+  font-size: 2rem;
+}
+
+.banner-about h2:last-of-type {
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  .banner-content {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .banner-c  {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/*Destaque
+------------------------------------------------------ */
+.destaque-conten {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1050px)  {
+  .destaque-conten {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width:830px)  {
+  .destaque-conten {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width:805px)  {
+  .destaque-conten {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width:540px)  {
+  .destaque-conten {
+    grid-template-columns: 250px;
+  }
+}
