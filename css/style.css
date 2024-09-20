@@ -758,12 +758,14 @@ img {
 }
 
 .gallery-left--text {
+  width: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
 
   padding: 20px;
   color: var(--colo-white-1);
+  background-color: #00000024;
 }
 
 .gallery-left--text h2 {
@@ -790,6 +792,10 @@ img {
 
 .gallery-top {
   height: 50%;
+}
+
+.gallery-image {
+  width: 50%;
 }
 
 .gallery-image,
