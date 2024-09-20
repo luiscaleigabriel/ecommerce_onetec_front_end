@@ -93,6 +93,14 @@ img {
   width: 100%;
 }
 
+.page {
+  margin-block: 4rem;
+}
+
+.page p span {
+  color: var(--colo-dark-2);
+}
+
 /*Header
 ------------------------------------------------------ */
 .header {
@@ -877,6 +885,93 @@ img {
   }
 }
 
+/*Contact page
+------------------------------------------------------ */
+.main-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-contact--content {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-left,
+.contact-rigt {
+  padding: 2rem;
+  box-shadow: 0 0 1rem var(--colo-white-2);
+}
+
+.contact-left hr {
+  margin-block: 2rem;
+}
+
+.contact-left p {
+  margin-block: 1rem;
+}
+
+.contact h2 i {
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: var(--colo-white-1);
+  background-color: var(--colo-primary);
+}
+
+.contact h2 span {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
+
+.form-group.group {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  outline: none;
+  background-color: var(--colo-white-2);
+}
+
+.form-group textarea {
+  height: 200px;
+  margin-block: 1rem;
+}
+
+.form-btn {
+  text-align: right;
+}
+
+@media screen and (max-width: 950px) {
+  .main-contact--content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form-group {
+    width: 100%;
+  }
+  .form-group.group {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /*Footer
 ------------------------------------------------------ */
 .footer {
@@ -917,5 +1012,31 @@ img {
 @media screen and (max-width: 500px) {
   .footer-content {
     grid-template-columns: 1fr;
+  }
+}
+
+/*NotFound
+------------------------------------------------------ */
+.notfound {
+  padding-block: 4rem;
+
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notfound h2 {
+  font-size: 3rem;
+}
+
+.notfound p {
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 780px) {
+  .notfound h2 {
+    font-size: 2rem;
   }
 }
