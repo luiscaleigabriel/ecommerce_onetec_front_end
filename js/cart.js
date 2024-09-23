@@ -76,7 +76,7 @@ function showProducts() {
 
         <input type="number" name="qtd" id="qtd" value="${product.quantity}" disabled />
 
-        <button id="btn-change" class="addToCart"  data-id="${product.id}" data-image="${product.image}" data-name="${product.name}" data-price="${product.price}">+</button>
+        <button id="btn-change" onclick="addProdct(${product.id})">+</button>
       </td>
       <td>
         ${product.quantity * product.price} Kz
