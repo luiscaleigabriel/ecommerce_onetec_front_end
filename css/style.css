@@ -334,6 +334,32 @@ img {
 
 .swiper-slide {
   height: 344px;
+  position: relative;
+}
+
+.slide-tex h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.slide-tex a {
+  display: block;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+.slide-tex a:hover {
+  color: var(--colo-primary);
+}
+
+
+.slide-tex {
+  width: 400px;
+  color: var(--colo-white-1);
+
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
 }
 
 .news-categoris .list {
@@ -365,6 +391,12 @@ img {
   .news-banner {
     padding: 0;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slide-tex {
+    width: 80%;
   }
 }
 
