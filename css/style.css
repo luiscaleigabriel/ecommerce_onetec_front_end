@@ -110,6 +110,27 @@ img {
   border-bottom: 1px solid var(--colo-dark-2);
 }
 
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 10px var(--colo-white-2);
+  background-color: var(--colo-white-1);
+  animation: smof 1s linear ease;
+}
+
+@keyframes smof {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 53px;
+    opacity: 1;
+  }
+}
+
 .header-content {
   display: flex;
   align-items: center;

@@ -62,6 +62,20 @@ setInterval(() => {
 }, 10000);
 
 /**
+ * Efeito scroll menu
+ */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= 50) {
+    header.classList.add('header-fixed');
+  }else {
+    header.classList.remove('header-fixed');
+  }
+});
+
+
+
+/**
  * Menu mobile
  */
 function navBar() {
