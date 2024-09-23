@@ -6,12 +6,14 @@ const btnsAdd = document.querySelectorAll('.addToCart');
 btnsAdd.forEach(btnAdd => {
   btnAdd.addEventListener('click', () => {
     const name = btnAdd.getAttribute('data-name');
+    const image = btnAdd.getAttribute('data-image');
     const price = btnAdd.getAttribute('data-price');
     const id = btnAdd.getAttribute('data-id');
     const quantity = 1
 
     const product = {
       id: id,
+      image: image,
       name: name,
       price: price,
       quantity: quantity

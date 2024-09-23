@@ -1012,6 +1012,47 @@ button {
   }
 }
 
+/*Card
+------------------------------------------------------ */
+.card-main  {
+  margin-top: 40px;
+  padding-bottom: 10rem;
+}
+
+.product-details {
+  margin-bottom: 2rem;
+}
+
+.product-details .list {
+  padding: 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  justify-content: space-between;
+  box-shadow: 0 0 1rem var(--colo-white-2);
+}
+
+.item-product {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.item-image img {
+  height: 60px;
+}
+
+.item-name {
+  font-size: 1rem;
+}
+
+.item-qtd {
+  width: 40px;
+}
+
+.item-qtd > input {
+  width: 100%;
+  height: 30px;
+}
 
 /*Footer
 ------------------------------------------------------ */
