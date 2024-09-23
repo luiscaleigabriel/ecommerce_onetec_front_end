@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('totalInCart').textContent = getCart().length;
+  showProducts();
 });
 const btnsAdd = document.querySelectorAll('.addToCart');
 
@@ -9,7 +10,7 @@ btnsAdd.forEach(btnAdd => {
     const image = btnAdd.getAttribute('data-image');
     const price = btnAdd.getAttribute('data-price');
     const id = btnAdd.getAttribute('data-id');
-    const quantity = 1
+    const quantity = 1;
 
     const product = {
       id: id,
@@ -46,63 +47,86 @@ function getCart() {
 
 function showProducts() {
   const products = getCart();
-  const showAll = document.getElementById('product-list');
+  const showAll = document.getElementById('product-list--main');
+  let total= 0;
 
   showAll.innerHTML = '';
 
+  if (products.length <= 0) {
+    showAll.innerHTML = '<h2 style="margin-block: 20px;">Nenhum produto adicionado</h2>';
+  }
+
   products.forEach(product => {
-    let productLi = document.createElement('li');
-    productLi.classList.add('product-item');
+    let productTr = document.createElement('tr');
     
-    let productId = document.createElement('span');
-    productId.textContent = product.id;
+    productTr.innerHTML = `
+    <td>
+      <div class="item-product">
+        <div>
+          <img src="${product.image}" alt="Product" />
+        </div>
+        <h2>${product.name}</h2>
+      </div>
+    </td>
+    <td>
+      ${product.price} kz
+    </td>
+      <td>
+        <button class="btn-change" onclick="subtraiProduct(${product.id})">-</button>
 
-    let productName = document.createElement('span');
-    productName.textContent = product.name;
+        <input type="number" name="qtd" id="qtd" value="${product.quantity}" disabled />
 
-    let productPrice = document.createElement('span');
-    productPrice.textContent = `${product.price} Kz`;
+        <button id="btn-change" class="addToCart"  data-id="${product.id}" data-image="${product.image}" data-name="${product.name}" data-price="${product.price}">+</button>
+      </td>
+      <td>
+        ${product.quantity * product.price} Kz
+      </td>
+      <td>
+        <button class="btn-primary" onclick="removeProduct(${product.id})">Remover</button>
+      </td>
+    `;
 
-    let productQuantity = document.createElement('span');
-    productQuantity.textContent = product.quantity;
-
-    let btnRemove = document.createElement('button');
-    btnRemove.classList.add('remove');
-    btnRemove.setAttribute('data-id', product.id);
-    btnRemove.textContent = 'Deletar';
-
-    let btnDiminuir = document.createElement('button');
-    btnDiminuir.classList.add('redux');
-    btnDiminuir.setAttribute('data-id', product.id);
-    btnDiminuir.textContent = '-';
-
-    productLi.appendChild(productId);
-    productLi.appendChild(productName);
-    productLi.appendChild(productPrice);
-    productLi.appendChild(productQuantity);
-    productLi.appendChild(btnDiminuir);
-    productLi.appendChild(btnRemove);
-    showAll.appendChild(productLi);
+    let valor = (product.price * product.quantity);
+    total += (product.price * product.quantity);
+    
+    showAll.appendChild(productTr);
   });
+
+  document.getElementById('total').textContent = `Total: ${total} Kz`;
 
 }
 
 function removeProduct(productId) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const productIndex = cart.findIndex(item => item.id === productId);
+  const productIndex = cart.findIndex(item => item.id == productId);
 
-  if (productIndex !== -1) {
+  if (productIndex != -1) {
     cart.splice(productIndex, 1);
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
+  showProducts();
+  document.getElementById('totalInCart').textContent = getCart().length;
+}
+
+function addProdct(productId) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const productIndex = cart.findIndex(item => item.id == productId);
+
+  if (productIndex != -1) {
+    cart[productIndex].quantity += 1;
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  showProducts();
+  document.getElementById('totalInCart').textContent = getCart().length;
 }
 
 function subtraiProduct(productId) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const productIndex = cart.findIndex(item => item.id === productId);
+  const productIndex = cart.findIndex(item => item.id == productId);
 
-  if (productIndex !== -1) {
+  if (productIndex != -1) {
     if (cart[productIndex].quantity > 1) {
       cart[productIndex].quantity -= 1
     }else {
@@ -111,15 +135,7 @@ function subtraiProduct(productId) {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
+  showProducts();
+  document.getElementById('totalInCart').textContent = getCart().length;
 }
 
-const btnRemoves = document.querySelectorAll('.remove');
-const btnReduxs = document.querySelectorAll('.redux');
-
-btnRemoves.forEach(btn => btn.addEventListener('click', () => {
-  removeProduct(btn.getAttribute('data-id'));
-}));
-
-btnReduxs.forEach(btn => btn.addEventListener('click', () => {
-  subtraiProduct(btn.getAttribute('data-id'));
-}));

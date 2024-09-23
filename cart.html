@@ -57,48 +57,24 @@
   </header> <!-- header -->
 
   <main class="card-main container">
-    <div class="product-details">
-      <ul class="list">
-        <li class="list-item">
-          Produto
-        </li>
-        <li class="list-item">
-          Preço
-        </li>
-        <li class="list-item">
-          Quantidade
-        </li>
-        <li class="list-item">
-          Subtotal
-        </li>
-      </ul>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Subtotal</th>
+          <th>#</th>
+        </tr>
+      </thead>
+      <tbody id="product-list--main">
+      </tbody>
+    </table>
+    <div class="tfoot">
+      <h2 id="total">Total: 0 Kz</h2>
     </div>
-    <div class="product-details">
-      <ul class="list">
-        <li class="list-item">
-          <div class="item-product">
-            <div class="item-image">
-              <img src="image/items/item-1.png" alt="product" />
-            </div>
-            <h2 class="item-name">Nome produto</h2>
-          </div> 
-        </li>
-        <li class="list-item">
-          <span class="item-price">
-            10000000 Kz
-          </span>
-        </li>
-        <li class="list-item">
-          <div class="item-qtd">
-            <input type="number" name="quantity" value="10" id="quantity" />
-          </div>
-        </li>
-        <li class="list-item">
-          <span class="item-subtotal">
-            10000000 Kz
-          </span>
-        </li>
-      </ul>
+    <div class="next-pay">
+      <a href="#" class="btn-primary">Comprar</a>
     </div>
   </main>
 

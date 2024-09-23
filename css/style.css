@@ -1019,40 +1019,84 @@ button {
   padding-bottom: 10rem;
 }
 
-.product-details {
-  margin-bottom: 2rem;
+.card-main .table {
+  width: 100%;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: .4rem;
+  border-collapse: collapse;
 }
 
-.product-details .list {
-  padding: 1.5rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  justify-content: space-between;
-  box-shadow: 0 0 1rem var(--colo-white-2);
+.card-main table.table thead {
+  background-color: var(--colo-dark-2);
+}
+
+.card-main table.table thead th {
+  color: var(--colo-white-1);
+  padding: 1rem;
+}
+
+.card-main table.table tbody tr {
+  height: 80px;
+}
+
+.card-main table.table tbody tr:nth-child(2n) {
+  background-color: var(--colo-white-2);
 }
 
 .item-product {
   display: flex;
-  gap: 1rem;
+  gap: .8rem;
   align-items: center;
 }
 
-.item-image img {
-  height: 60px;
+.item-product div {
+  height: 70px;
 }
 
-.item-name {
+.item-product h2 {
   font-size: 1rem;
 }
 
-.item-qtd {
+#qtd {
   width: 40px;
+  height: 40px;
+  padding-left: 8px;
+  user-select: none;
 }
 
-.item-qtd > input {
-  width: 100%;
-  height: 30px;
+.btn-change,
+#btn-change {
+  padding: 10px 20px;
+  color: var(--colo-white-1);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: var(--transation-1);
+  border: 2px solid var(--colo-dark-1);
+  background-color: var(--colo-dark-1);
 }
+
+.btn-change:hover,
+#btn-change:hover {
+  border-color: var(--colo-dark-1);
+  color: var(--colo-dark-1);
+  background-color: transparent;
+}
+
+.tfoot {
+  color: var(--colo-white-1);
+  padding: 1rem;
+  text-align: right;
+  background-color: var(--colo-dark-2);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.next-pay {
+  margin-top: 30px;
+}
+
 
 /*Footer
 ------------------------------------------------------ */
