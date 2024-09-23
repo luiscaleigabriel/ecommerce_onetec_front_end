@@ -227,8 +227,8 @@ img {
   padding: 4px;
   font-weight: bold;
   color: var(--colo-white-1);
-  font-size: .5rem;
-  border-radius: 50%;
+  font-size: .7rem;
+  border-radius: 20px;
   overflow: none;
   background-color: var(--colo-primary);
 }
