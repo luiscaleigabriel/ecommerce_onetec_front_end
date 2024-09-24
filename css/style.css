@@ -1099,6 +1099,17 @@ button {
   margin-top: 30px;
 }
 
+@media screen and (max-width: 790px) {
+  main.card-main  {
+    overflow: auto;
+  }
+  table.table,
+  .tfoot {
+    width: 800px;
+    min-width: 800px;
+  }
+}
+
 /*Checkout page
 ------------------------------------------------------ */
 .checkout {
@@ -1195,6 +1206,105 @@ button {
 
 .pay .btn-primary {
   align-self: self-start;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-left {
+    width: 50%;
+  }
+  .form-rigth {
+    width: 50%;
+  }
+  .checkout-form {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form-left {
+    width: 100%;
+  }
+  .form-rigth {
+    width: 100%;
+  }
+  .checkout-form {
+    gap: 2rem;
+    flex-direction: column;
+  }
+}
+
+/*Details Product Page
+------------------------------------------------------ */
+.main-product {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.main-product--image {
+  width: 50%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-product--details {
+  width: 40%;
+}
+
+.main-product--details .price {
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.main-product--details hr {
+  margin-bottom: 2rem;
+}
+
+.main-product--details .product-name {
+  font-size: 1.2rem;
+}
+
+.main-product--details .product-price {
+  font-size: 1.2rem;
+}
+
+.div-btn {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.div-btn button:nth-child(2) {
+  color: var(--colo-dark-2);
+  width: 2rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-product--details {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-product {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .main-product--image {
+    width: 100%;
+  }
+  .main-product--details {
+    width: 100%;
+  }
 }
 
 /*Footer

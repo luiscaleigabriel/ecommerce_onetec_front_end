@@ -56,7 +56,10 @@ const myloop2 = document.getElementById('btn-next1');
 const myloop3 = document.getElementById('btn-next2');
 
 setInterval(() => {
-  myloop1.click();
+  if (myloop1) {
+    myloop1.click();
+    myloop3.click();
+  }
   myloop2.click();
-  myloop3.click();
+  
 }, 10000);
