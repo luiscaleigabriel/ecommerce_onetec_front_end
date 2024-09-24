@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('totalInCart').textContent = getCart().length;
-  showProducts();
 });
+
 const btnsAdd = document.querySelectorAll('.addToCart');
 
 btnsAdd.forEach(btnAdd => {
@@ -86,7 +86,6 @@ function showProducts() {
       </td>
     `;
 
-    let valor = (product.price * product.quantity);
     total += (product.price * product.quantity);
     
     showAll.appendChild(productTr);
@@ -100,6 +99,7 @@ function showInCheckout() {
   const products = getCart();
   const showAll = document.getElementById('list-checkout');
   let total= 0;
+  let entrega= 2000;
 
   showAll.innerHTML = '';
 
@@ -108,10 +108,18 @@ function showInCheckout() {
   }
 
   products.forEach(product => {
-    let productTr = document.createElement('tr');
-    
+    let productTr = document.createElement('div');
+    productTr.classList.add('checkout-product');
+
     productTr.innerHTML = `
-    
+      <div class="checkout-details-p">
+          <div class="checkout-product--image">
+            <img src="${product.image}" alt="product" />
+          </div>
+          <h2>${product.name}</h2> <span>x ${product.quantity}</span>
+        </div>
+        <h3 class="checkout-p--price">${product.price * product.quantity}kz</h3>
+      </div>
     `;
 
     let valor = (product.price * product.quantity);
@@ -120,7 +128,15 @@ function showInCheckout() {
     showAll.appendChild(productTr);
   });
 
-  document.getElementById('total').textContent = `Total: ${total} Kz`;
+  document.getElementById('subtotal').textContent = `${total}Kz`;
+  
+  if(total > 80000) {
+    document.getElementById('entrega').textContent = `Grátis`;
+    document.getElementById('total').textContent = `${total}Kz`;
+  }else {
+    document.getElementById('entrega').textContent = `${entrega}Kz`;
+    document.getElementById('total').textContent = `${total + entrega}Kz`;
+  }
 
 }
 

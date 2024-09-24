@@ -92,38 +92,21 @@
         </div>
       </div>
       <div class="form-rigth">
-        <div class="form-r--top">
-          <div class="checkout-product">
-            <div class="checkout-details-p">
-              <div class="checkout-product--image">
-                <img src="image/items/item-1.png" alt="product" />
-              </div>
-              <h2>Nome produto</h2>
-            </div>
-            <h3 class="checkout-p--price">10000 kz</h3>
-          </div>
-          <div class="checkout-product">
-            <div class="checkout-details-p">
-              <div class="checkout-product--image">
-                <img src="image/items/item-1.png" alt="product" />
-              </div>
-              <h2>Nome produto</h2> <span>x 1</span>
-            </div>
-            <h3 class="checkout-p--price">10000 kz</h3>
-          </div>
+        <div id="list-checkout" class="form-r--top">
+          
         </div>
         <div class="form-r-botton">
-          <div class="">
+          <div>
             <span>SubTotal</span>
-            <span>1000kz</span>
+            <span id="subtotal">1000kz</span>
           </div>
-          <div class="">
+          <div>
             <span>Entrega</span>
-            <span></span>
+            <span id="entrega"></span>
           </div>
-          <div class="">
+          <div>
             <span>Total</span>
-            <span>10000kz</span>
+            <span id="total"></span>
           </div>
 
         </div>
@@ -182,6 +165,12 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      showInCheckout();
+    });
+  </script>
 
   <script src="js/app.js"></script>
   <script src="js/cart.js"></script>

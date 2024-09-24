@@ -1161,6 +1161,21 @@ button {
   height: 60px;
 }
 
+.form-r-botton div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-r-botton div:not(:nth-child(3)) {
+  border-bottom: 1px solid var(--colo-dark-2);
+}
+
+.form-r-botton div span {
+  font-size: 1rem;
+  padding: .6rem;
+}
+
 /*Footer
 ------------------------------------------------------ */
 .footer {
