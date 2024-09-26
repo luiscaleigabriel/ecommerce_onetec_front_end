@@ -1354,6 +1354,95 @@ button {
   }
 }
 
+/*Acount page
+------------------------------------------------------ */
+.acount {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.acount-menu {
+  width: 30%;
+}
+
+.acount-menu h3 {
+  font-size: 1.1rem;
+  margin-block: 1rem;
+}
+
+.acount-menu .list {
+  color: var(--colo-dark-2);
+  align-items: start;
+  flex-direction: column;
+}
+
+.acount-menu .list .list-item a:hover {
+  color: var(--colo-primary);
+}
+
+.acount-menu .list .list-item a:hover::before {
+  background-color: var(--colo-primary);
+}
+
+.acout-form {
+  width: 70%;
+  padding: 2rem;
+  box-shadow: 0 0 1rem var(--colo-white-2);
+}
+
+.acout-form h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--colo-primary);
+}
+
+.group {
+  display: flex;
+  gap: 1rem;
+}
+
+.group .form-group {
+  width: 50%;
+}
+
+.acout-form .form-group {
+  margin-block: .6rem;
+}
+
+.acout-form .form-group label {
+  font-size: .9rem;
+  display: block;
+  margin-bottom: .6rem;
+}
+
+.form-btns {
+  margin-top: .8rem;
+  text-align: right;
+}
+
+@media screen and (max-width: 820px) {
+  .acount {
+    flex-direction: column;
+  }
+  .acount-menu {
+    width: 100%;
+  }
+  .acout-form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .group {
+    flex-direction: column;
+  }
+  .group .form-group {
+    width: 100%;
+  }
+}
+
 /*Footer
 ------------------------------------------------------ */
 .footer {
