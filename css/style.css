@@ -1307,6 +1307,53 @@ button {
   }
 }
 
+/*About Page
+------------------------------------------------------ */
+.about {
+  margin-block: 4rem;
+}
+
+.about-us {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-us--text {
+  width: 50%;
+}
+
+.about-us--text h2 {
+  color: var(--colo-dark-2);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-us--text p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-us--image {
+  width: 50%;
+  height: 570px;
+}
+
+@media screen and (max-width: 880px) {
+  .about-us {
+    flex-direction: column;
+  }
+  .about-us--text {
+    width: 100%;
+  }
+  
+  .about-us--image {
+    width: 100%;
+    height: auto;
+  }
+}
+
 /*Footer
 ------------------------------------------------------ */
 .footer {
