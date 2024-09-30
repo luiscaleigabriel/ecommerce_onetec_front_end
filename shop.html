@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OneTec</title>
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+  <header id="header" class="header">
+    <div class="header-content container">
+      <div class="logo">
+        <a href="index.html">
+          <h1>OneTec</h1>
+        </a>
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="contact.html">Contacto</a>
+          </li>
+          <li>
+            <a href="about.html">Sobre</a>
+          </li>
+          <li>
+            <a href="login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="search">
+        <form action="">
+          <input type="search" name="search" id="search" placeholder="Oque você quer ver" />
+          <button type="submit"> <i class="fa fa-search"></i> </button>
+        </form>
+        <div class="list-icon">
+          <a href="#" class="heart-icon">
+            <img src="image/heart.png" alt="heart" />
+            <span id="totaLike">0</span>
+          </a>
+          <a href="cart.html" class="cart-icon">
+            <img src="image/cart.png" alt="cart" />
+            <span id="totalInCart">0</span>
+          </a>
+          <button id="toggle" class="toggle" onclick="navBar()">
+            <span class="row"></span>
+            <span class="row"></span>
+            <span class="row"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header> <!-- header -->
+
+  <main class="shop-main container">
+    <div class="shop-options">
+      <div class="shop-categories">
+        <h2>Categorias</h2>
+        <ul class="list">
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+        </ul>
+        <h2>SubCategorias</h2>
+        <ul class="list">
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Electronicos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="shop-products">
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product-image">
+          <img src="image/items/item-1.png" alt="product" />
+          <button data-id="1" data-name="Produto 1" 
+          data-image="image/items/item-1.png" data-price="1000" class="btn-add addToCart" ><i class="fa fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-about">
+          <h2 class="product-name">Nome do produto</h2>
+          <div class="prices">
+            <span class="price">1.000.000 Kz</span>
+            <span class="price-prev">1.000.100 Kz</span>
+          </div>
+          <hr />
+          <div class="product-links">
+            <a href="#"><i class="fa fa-heart"></i></a>
+            <a href="#"><i class="fa fa-eye"></i></a>
+            <a class="btn-add-mobile" href="#"><i class="fa fa-cart-shopping"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="div">
+        <h2>Sobre-nós</h2>
+        <p>
+          Somos uma Lojá que tem como objectivo fornecer produtos de qualidade
+        </p>
+      </div>
+      <div class="div">
+        <h2>Suporte</h2>
+        <ul class="list">
+          <li class="list-item">onetec@gmail.com</li>
+          <li class="list-item">(+224) 929-379-920</li>
+        </ul>
+      </div>
+      <div class="div">
+        <h2>Conta</h2>
+        <ul class="list">
+          <li class="list-item">
+            <a href="count.html">Minha Conta</a>
+          </li>
+          <li class="list-item">
+            <a href="login.html">Login/Cadastro</a>
+          </li>
+          <li class="list-item">
+            <a href="cart.html">Carrinho de Compras</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Lista de Favoritos</a>
+          </li>
+          <li class="list-item">
+            <a href="shop.html">Loja</a>
+          </li>
+        </ul>
+      </div>
+      <div class="div">
+        <h2>Links Importante</h2>
+        <ul class="list">
+          <li class="list-item">
+            <a href="about.html">Púlica & Privacidade</a>
+          </li>
+          <li class="list-item">
+            <a href="about.html">Termos de Uso</a>
+          </li>
+          <li class="list-item">
+            <a href="contact.html">Contactos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
