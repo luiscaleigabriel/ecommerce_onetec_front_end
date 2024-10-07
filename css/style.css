@@ -262,22 +262,15 @@ img {
     transition: var(--transation-1);
     background-color: #ccc;
   }
-  .row {
-    display: block;
-    width: 90%;
-    height: 2px;
-    margin: 4px auto; 
-    border-radius: 20px;
-    background-color: var(--colo-dark-2);
-  }
   #toggle {
     display: block;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    border: 1px solid var(--colo-dark-2);
-    border-radius: 4px;
+    font-size: 1rem;
+    border: none;
+    padding: 0 .4rem;
     background: transparent;
+  }
+  #toggle i {
+    font-size: 1rem;
   }
   .header-bar {
     position: fixed;
